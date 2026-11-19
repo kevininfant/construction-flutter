@@ -1,3 +1,3 @@
 // development url
 
-const uri = 'https://construction-api-ksle.onrender.com/api/v1';
+const uri = 'http://localhost:3307/api/v1';

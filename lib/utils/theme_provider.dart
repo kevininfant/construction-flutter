@@ -23,9 +23,8 @@ class MyThemes {
     primaryColor: Colors.white,
     colorScheme: ColorScheme.light(),
     textTheme: ThemeData.light().textTheme.copyWith(
-        headline6: TextStyle(color: Colors.black, fontSize: 12),
-        subtitle2:
-            TextStyle(color: Colors.black, )),
+        titleMedium: const TextStyle(color: Colors.black, fontSize: 12),
+        bodySmall: const TextStyle(color: Colors.black)),
     appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
         titleTextStyle: TextStyle(

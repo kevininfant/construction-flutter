@@ -1,9 +1,12 @@
 import 'package:construction_app/Screen/home_screen.dart';
 import 'package:construction_app/Screen/onboard_screen.dart';
 import 'package:construction_app/Screen/user_screen.dart';
+import 'package:construction_app/Screen/track_complaint_screen.dart';
+import 'package:construction_app/Screen/complaint_history_screen.dart';
+import 'package:construction_app/Screen/auth_screen.dart';
+import 'package:construction_app/Screen/admin_dashboard_screen.dart';
+import 'package:construction_app/Screen/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'Screen/auth_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,40 +14,27 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'T.R Construction',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFe94560)),
+        useMaterial3: true,
+      ),
       home: OnboardingScreen(),
       routes: {
-        UsersScreen.routeName: (context) => const UsersScreen(),
         OnboardingScreen.routeName: (context) => OnboardingScreen(),
-        HomeScreen.routeName:(context) => const HomeScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
+        AuthScreen.routeName: (context) => const AuthScreen(),
+        UsersScreen.routeName: (context) => const UsersScreen(),
+        TrackComplaintScreen.routeName: (context) => const TrackComplaintScreen(),
+        ComplaintHistoryScreen.routeName: (context) => const ComplaintHistoryScreen(),
+        AdminDashboardScreen.routeName: (context) => const AdminDashboardScreen(),
+        ProfileScreen.routeName: (context) => const ProfileScreen(),
       },
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body:  OnboardingScreen(),
     );
   }
 }

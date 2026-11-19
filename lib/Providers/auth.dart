@@ -2,13 +2,10 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'package:construction_app/Screen/home_screen.dart';
 import 'package:construction_app/constants/utils.dart';
 import 'package:flutter/material.dart';
 import '../utils/aes_encryption.dart';
 import '../utils/app_config.dart';
-import '../constants/error_handling.dart';
-// import 'package:ecomerce_app/constants/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/crud_config.dart';
